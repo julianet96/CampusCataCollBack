@@ -1,6 +1,7 @@
 const express = require("express");
 const userRoutes = require("./routes/user.routes");
 const authRoutes = require("./routes/auth.routes");
+const { requireAuth } = require("./middleware/auth.middleware");
 
 function createApp() {
   const app = express();
@@ -11,6 +12,7 @@ function createApp() {
     res.json({ ok: true, status: "up" });
   });
 
+  app.use("/api", requireAuth);
   app.use("/api/users", userRoutes);
   app.use("/api/auth", authRoutes);
 
