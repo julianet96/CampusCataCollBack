@@ -1,0 +1,25 @@
+{
+  "name": "campuscatacollback",
+  "version": "1.0.0",
+  "description": "CampusCataCollBack",
+  "author": "Julia Colom",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "body-parser": "2.2.2",
+    "config": "4.2.0",
+    "cors": "2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "9.0.3",
+    "mongodb": "7.0.0",
+    "mongoose": "^9.1.5"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
